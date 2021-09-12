@@ -17,9 +17,12 @@ export default function Home() {
         <main>
           <div
             className="section profile"
-            style={{ display: "flex", justifyContent: "space-around" }}
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+            }}
           >
-            <div>
+            <div style={{ margin: "1rem" }}>
               <img
                 src="/Profile.png"
                 alt="Picture of the author"
@@ -28,7 +31,7 @@ export default function Home() {
                 style={{ borderRadius: "39% 61% 25% 75% / 36% 56% 44% 64%" }}
               />
             </div>
-            <div>
+            <div style={{ margin: "1rem" }}>
               <h2 className="title">Wan Cho</h2>
               <p className="description">
                 <EmailIcon width="20" height="20" />
@@ -80,7 +83,7 @@ export default function Home() {
                   <p>틱톡처럼 무작위 문장이 뜨는 SNS</p>
                   <p>- 웹버전과 아이폰 앱을 풀스택으로 개발</p>
                   <p>- stack: react, nodejs, postgresql, swift</p>
-                  <p>- 사용자 선호에 따른 문장 추천 기능</p>
+                  <p>- 사용자 선호에 따라 뜨는 문장이 바뀌는 추천 시스템</p>
                   <p>
                     - 웹 프론트는 aws cloudfront 로 배포. 백엔드는 aws ec2와 api
                     gateway 를 이용해 api 서버를 구축
@@ -324,6 +327,11 @@ export default function Home() {
             //justify-content: center;
             //align-items: center;
           }
+          @media (max-width: 600px) {
+            main {
+              padding: 5rem 2rem;
+            }
+          }
 
           a {
             color: #0070f3;
@@ -419,6 +427,7 @@ export default function Home() {
               width: 100%;
               flex-direction: column;
               justify-content: center;
+              text-align: center;
             }
             .container {
               margin-left: 0px;
