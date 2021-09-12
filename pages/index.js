@@ -41,6 +41,10 @@ export default function Home() {
                   <GithubIcon width="20" height="20" />
                   Github
                 </a>
+                <br />
+                <a target="_blank" href="https://budlebee.github.io">
+                  https://budlebee.github.io
+                </a>
               </p>
             </div>
           </div>
@@ -61,16 +65,9 @@ export default function Home() {
             <div className="small-section">
               <details open>
                 <summary>
-                  <span>문장공유 SNS 쿤데라</span>
                   <span style={{ margin: "1rem" }}>
-                    <a
-                      target="_blank"
-                      href="https://kundera.so"
-                      style={{ color: "#000" }}
-                    >
-                      <button className="retro-button-violet">
-                        사용해보기
-                      </button>
+                    <a target="_blank" href="https://kundera.so">
+                      문장공유 SNS 쿤데라 (https://kundera.so)
                     </a>
                   </span>
                 </summary>
@@ -95,14 +92,9 @@ export default function Home() {
             <div className="small-section">
               <details open>
                 <summary>
-                  <span>노트테이킹 서비스 Foresty</span>
                   <span style={{ margin: "1rem" }}>
-                    <a
-                      target="_blank"
-                      href="https://foresty.net"
-                      style={{ color: "#000" }}
-                    >
-                      <button className="retro-button-green">사용해보기</button>
+                    <a target="_blank" href="https://foresty.net">
+                      노트테이킹 서비스 Foresty (https://foresty.net)
                     </a>
                   </span>
                 </summary>
@@ -125,16 +117,9 @@ export default function Home() {
             <div className="small-section">
               <details open>
                 <summary>
-                  <span>유튜브 캡쳐 SaaS Videoglancer</span>
                   <span style={{ margin: "1rem" }}>
-                    <a
-                      target="_blank"
-                      href="https://videoglancer.com"
-                      style={{ color: "#000" }}
-                    >
-                      <button className="retro-button-yellow">
-                        사용해보기
-                      </button>
+                    <a target="_blank" href="https://videoglancer.com">
+                      유튜브 캡쳐 SaaS (https://videoglancer.com)
                     </a>
                   </span>
                 </summary>
@@ -158,14 +143,12 @@ export default function Home() {
             <div className="small-section">
               <details open>
                 <summary>
-                  <span>크롬/웨일 익스텐션 Go연세/Go려대</span>
                   <span style={{ margin: "1rem" }}>
                     <a
                       target="_blank"
                       href="https://store.whale.naver.com/detail/flaejhfppahhbmndffooogikeaphbfmd"
-                      style={{ color: "#000" }}
                     >
-                      <button className="retro-button-blue">사용해보기</button>
+                      크롬/웨일 익스텐션 Go연세/Go려대
                     </a>
                   </span>
                 </summary>
