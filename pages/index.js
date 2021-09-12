@@ -1,4 +1,8 @@
 import Head from "next/head";
+import Image from "next/image";
+import KunderaMain from "../public/KunderaMain.png";
+import KunderaStore from "../public/KunderaStore.jpg";
+import Profile from "../public/Profile.png";
 import { GithubIcon } from "../assets/icons";
 
 export default function Home() {
@@ -28,12 +32,19 @@ export default function Home() {
                 연세대학교 물리학과 (2015.03-2022.02 졸업예정자)
               </div>
               <div className="small-section">
-                GPA total: 4.05 / 4.5, Major: 4.12 / 4.5
+                GPA Total: 4.05 / 4.5, Major: 4.12 / 4.5
               </div>
             </p>
           </div>
           <div className="section">
             <h3 className="small-title">Works</h3>
+            <div>문장공유 SNS 쿤데라</div>
+            <Image
+              src={KunderaStore}
+              alt="Picture of the author"
+              width={200}
+              height={200}
+            />
             <div className="grid">
               <a target="_blank" href="https://kundera.so" className="card">
                 <h3>문장공유 SNS 쿤데라 &rarr;</h3>
@@ -106,13 +117,12 @@ export default function Home() {
             <h3 className="small-title">Skill Set</h3>
             <p className="description">
               <div className="small-section">
-                완성된 프로젝트 사용 경험이 있음
                 <br />
                 HTML, CSS, JS, React, NodeJS, PostgreSQL, Swift, AWS(EC2, API
                 Gateway, Lambda, SES, Route53, Cloudfront), Matlab
               </div>
               <div className="small-section">
-                개인 프로젝트 사용 경험이 있음
+                personal interest
                 <br />
                 Clojure, Python, Unity with C#
               </div>
@@ -149,6 +159,12 @@ export default function Home() {
                 (제 1-2290130 호)
               </div>
               <div className="small-section">
+                연세대 멋쟁이 사자처럼 8기 (2020)
+              </div>
+              <div className="small-section">
+                연세대 상경경영대 동아리 헤드락 부회장 (2019.02-2019.08)
+              </div>
+              <div className="small-section">
                 락밴드 윈터폴 작사, 작곡, 리더 (2016.12-2018.08)
                 <br />
                 <a
@@ -158,10 +174,6 @@ export default function Home() {
                   Melon에서 듣기
                 </a>
               </div>
-              <div className="small-section">
-                상경경영대 동아리 헤드락 부회장 (2019.02-2019.08)
-              </div>
-              <div className="small-section">연세대 멋쟁이 사자처럼 8기</div>
               <div className="small-section">
                 <a target="_blank" href="https://budlebee.wordpress.com">
                   개인 블로그
@@ -179,10 +191,10 @@ export default function Home() {
             padding: 0 0.5rem;
             margin-left: 10vw;
             margin-right: 10vw;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            //display: flex;
+            //flex-direction: column;
+            //justify-content: center;
+            //align-items: center;
           }
           .small-section {
             margin-top: 0.8rem;
@@ -191,11 +203,11 @@ export default function Home() {
 
           main {
             padding: 5rem 0;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            //flex: 1;
+            //display: flex;
+            //flex-direction: column;
+            //justify-content: center;
+            //align-items: center;
           }
 
           footer {
