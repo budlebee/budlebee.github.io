@@ -1,9 +1,9 @@
 import Head from "next/head";
-import Image from "next/image";
+//import Image from "next/image";
 import KunderaMain from "../public/KunderaMain.png";
 import KunderaStore from "../public/KunderaStore.jpg";
 import Profile from "../public/Profile.png";
-import { GithubIcon } from "../assets/icons";
+import { GithubIcon, EmailIcon } from "../assets/icons";
 
 export default function Home() {
   return (
@@ -15,18 +15,34 @@ export default function Home() {
         </Head>
 
         <main>
-          <div className="section">
-            <h2 className="title">Wan Cho</h2>
-            <p className="description">
-              bbogle7613@gmail.com
-              <br />
-              <a target="_blank" href="https://github.com/budlebee">
-                Github
-              </a>
-            </p>
+          <div
+            className="section profile"
+            style={{ display: "flex", justifyContent: "space-around" }}
+          >
+            <div>
+              <img
+                src="/Profile.png"
+                alt="Picture of the author"
+                width={200}
+                height={200}
+                style={{ borderRadius: "39% 61% 25% 75% / 36% 56% 44% 64%" }}
+              />
+            </div>
+            <div>
+              <h2 className="title">Wan Cho</h2>
+              <p className="description">
+                <EmailIcon width="20" height="20" />
+                bbogle7613@gmail.com
+                <br />
+                <a target="_blank" href="https://github.com/budlebee">
+                  <GithubIcon width="20" height="20" />
+                  Github
+                </a>
+              </p>
+            </div>
           </div>
           <div className="section">
-            <h3 className="small-title">Education</h3>
+            <div className="title">Education</div>
             <p className="description">
               <div className="small-section">
                 연세대학교 물리학과 (2015.03-2022.02 졸업예정자)
@@ -37,53 +53,143 @@ export default function Home() {
             </p>
           </div>
           <div className="section">
-            <h3 className="small-title">Works</h3>
-            <div>문장공유 SNS 쿤데라</div>
-            <Image
-              src={KunderaStore}
-              alt="Picture of the author"
-              width={200}
-              height={200}
-            />
-            <div className="grid">
-              <a target="_blank" href="https://kundera.so" className="card">
-                <h3>문장공유 SNS 쿤데라 &rarr;</h3>
-                <p>
-                  좋은 문장을 발견하고, 공유하는 서비스.
-                  <br />
-                  React, NodeJS, postgreSQL, AWS, SwiftUI
-                </p>
-              </a>
+            <div className="title">Works</div>
 
-              <a
-                target="_blank"
-                href="https://videoglancer.com"
-                className="card"
-              >
-                <h3>Videoglancer &rarr;</h3>
+            <div className="small-section">
+              <details open>
+                <summary>
+                  <span>문장공유 SNS 쿤데라</span>
+                  <span style={{ margin: "1rem" }}>
+                    <a
+                      target="_blank"
+                      href="https://kundera.so"
+                      style={{ color: "#000" }}
+                    >
+                      <button className="retro-button-violet">
+                        사용해보기
+                      </button>
+                    </a>
+                  </span>
+                </summary>
                 <p>
-                  유튜브 동영상을 자동으로 캡쳐해서 PDF로 변환해주는 SaaS.
-                  <br />
-                  Websocket API, AWS
+                  <img
+                    src="/KunderaStore.jpg"
+                    alt="Picture of the Kundera App store"
+                    width="100%"
+                  />
+                  <p>틱톡처럼 무작위 문장이 뜨는 SNS</p>
+                  <p>- 웹버전과 아이폰 앱을 풀스택으로 개발</p>
+                  <p>- stack: react, nodejs, postgresql, swift</p>
+                  <p>- 사용자 선호에 따른 문장 추천 기능</p>
+                  <p>
+                    - 웹 프론트는 aws cloudfront 로 배포. 백엔드는 aws ec2와 api
+                    gateway 를 이용해 api 서버를 구축
+                  </p>
                 </p>
-              </a>
+              </details>
+            </div>
 
-              <a target="_blank" href="https://foresty.net" className="card">
-                <h3>Foresty &rarr;</h3>
+            <div className="small-section">
+              <details open>
+                <summary>
+                  <span>노트테이킹 서비스 Foresty</span>
+                  <span style={{ margin: "1rem" }}>
+                    <a
+                      target="_blank"
+                      href="https://foresty.net"
+                      style={{ color: "#000" }}
+                    >
+                      <button className="retro-button-green">사용해보기</button>
+                    </a>
+                  </span>
+                </summary>
                 <p>
-                  트리 그래프 기반의 노트 테이킹 서비스. <br />
-                  D3.js, React, Google firebase
+                  <video
+                    src="https://foresty-tutorial.s3.ap-northeast-2.amazonaws.com/home-vidoe.mp4"
+                    autoplay="true"
+                    playsinline="true"
+                    loop="true"
+                    width="100%"
+                  ></video>
+                  <p>트리 그래프 형식의 노트테이킹 서비스</p>
+                  <p>- stack: d3js, react, google firebase</p>
+                  <p>- 클릭앤 드래그로 노드 연결 기능</p>
+                  <p>- 멀티윈도우 기능</p>
                 </p>
-              </a>
+              </details>
+            </div>
 
-              <a target="_blank" href="https://tect.dev" className="card">
-                <h3>Tect.dev &rarr;</h3>
+            <div className="small-section">
+              <details open>
+                <summary>
+                  <span>유튜브 캡쳐 SaaS Videoglancer</span>
+                  <span style={{ margin: "1rem" }}>
+                    <a
+                      target="_blank"
+                      href="https://videoglancer.com"
+                      style={{ color: "#000" }}
+                    >
+                      <button className="retro-button-yellow">
+                        사용해보기
+                      </button>
+                    </a>
+                  </span>
+                </summary>
                 <p>
-                  전공별 커리큘럼 한눈에 보기
-                  <br />
-                  D3.js, NextJS, Google firebase
+                  <img
+                    src="https://videoglancer.com/static/media/sample.d33125ae.png"
+                    width="100%"
+                  ></img>
+                  <p>
+                    유튜브 영상 url 을 입력하면 영상을 1분단위로 캡쳐해서 pdf 로
+                    만들어 주는 서비스.
+                  </p>
+                  <p>
+                    - stack: websocket API, 브라우저 자동화 도구 puppeteer, aws
+                    lambda, api gateway
+                  </p>
                 </p>
-              </a>
+              </details>
+            </div>
+
+            <div className="small-section">
+              <details open>
+                <summary>
+                  <span>크롬/웨일 익스텐션 Go연세/Go려대</span>
+                  <span style={{ margin: "1rem" }}>
+                    <a
+                      target="_blank"
+                      href="https://store.whale.naver.com/detail/flaejhfppahhbmndffooogikeaphbfmd"
+                      style={{ color: "#000" }}
+                    >
+                      <button className="retro-button-blue">사용해보기</button>
+                    </a>
+                  </span>
+                </summary>
+                <p>
+                  <img src="/goyonsei.png" width="100%"></img>
+                  <img src="/goryu.png" width="100%"></img>
+                  <p>연세대 / 고려대 생이 자주 가는 링크 모음</p>
+                  <p>
+                    -{" "}
+                    <a
+                      target="_blank"
+                      href="https://github.com/seohyun0120/Quick-Sook"
+                    >
+                      퀵숙
+                    </a>
+                    을 포크해서 제작.
+                  </p>
+                  <p>
+                    - 다크모드 기능을 추가해서 PR을 날린뒤, 저희 학교용으로
+                    제작해도 되냐고 허락을 받아서 제작하게 됨.
+                  </p>
+                  <p>
+                    - 고려대 익스텐션도 연대생이 만들어 버리면 재밌겠다 싶어서
+                    만들어버림.
+                  </p>
+                </p>
+              </details>
             </div>
           </div>
           <div className="section">
@@ -109,7 +215,8 @@ export default function Home() {
                 </a>
               </div>
               <div className="small-section">
-                Imaging Charge Density Wave Phase (2021.08)
+                연세대 양자이미지 연구실 - Charge Density Wave Phase Analysis
+                (2021.08-)
               </div>
             </p>
           </div>
@@ -117,14 +224,9 @@ export default function Home() {
             <h3 className="small-title">Skill Set</h3>
             <p className="description">
               <div className="small-section">
-                <br />
                 HTML, CSS, JS, React, NodeJS, PostgreSQL, Swift, AWS(EC2, API
-                Gateway, Lambda, SES, Route53, Cloudfront), Matlab
-              </div>
-              <div className="small-section">
-                personal interest
-                <br />
-                Clojure, Python, Unity with C#
+                Gateway, Lambda, SES, Route53, Cloudfront), Matlab, Clojure,
+                Python, Unity
               </div>
             </p>
           </div>
@@ -142,7 +244,9 @@ export default function Home() {
               <div className="small-section">
                 2020, 2021 연세대 고등교육원 워크스테이션 선정 (상금 350만원)
               </div>
-              <div className="small-section">2021 성적우수장학금</div>
+              <div className="small-section">
+                2021 학과 수석 및 성적우수장학금
+              </div>
               <div className="small-section">
                 2020 연세대 스타트업 이글스 선정 (지원금액 300만원)
               </div>
@@ -184,6 +288,11 @@ export default function Home() {
         </main>
 
         <style jsx>{`
+          summary {
+            cursor: pointer;
+            font-weight: 700;
+            font-style: italic;
+          }
           .container {
             background-color: #ffffff;
             color: #000000;
@@ -191,18 +300,24 @@ export default function Home() {
             padding: 0 0.5rem;
             margin-left: 10vw;
             margin-right: 10vw;
-            //display: flex;
-            //flex-direction: column;
-            //justify-content: center;
-            //align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+          }
+          .title {
+            font-size: 32px;
+            font-weight: 700;
           }
           .small-section {
-            margin-top: 0.8rem;
-            margin-bottom: 0.8rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-size: 16px;
           }
 
           main {
-            padding: 5rem 0;
+            padding: 5rem 5rem;
             //flex: 1;
             //display: flex;
             //flex-direction: column;
@@ -210,45 +325,9 @@ export default function Home() {
             //align-items: center;
           }
 
-          footer {
-            width: 100%;
-            height: 100px;
-            border-top: 1px solid #eaeaea;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-
-          footer img {
-            margin-left: 0.5rem;
-          }
-
-          footer a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-
           a {
             color: #0070f3;
             text-decoration: none;
-          }
-
-          .title a {
-            color: #0070f3;
-            text-decoration: none;
-          }
-
-          .title a:hover,
-          .title a:focus,
-          .title a:active {
-            text-decoration: underline;
-          }
-
-          .title {
-            margin: 0;
-            line-height: 1.15;
-            font-size: 4rem;
           }
 
           .small-title {
@@ -261,15 +340,17 @@ export default function Home() {
           .title,
           .section,
           .description {
-            text-align: center;
+            //text-align: center;
           }
 
           .section {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
           }
 
           .description {
-            line-height: 1.5;
-            font-size: 1.5rem;
+            line-height: 1.2;
+            //font-size: 1.5rem;
           }
 
           code {
@@ -328,11 +409,17 @@ export default function Home() {
             line-height: 1.5;
           }
 
-          .logo {
-            height: 1em;
+          button {
+            margin-top: 0.8rem;
+            margin-bottom: 0.8rem;
           }
 
           @media (max-width: 600px) {
+            .profile {
+              width: 100%;
+              flex-direction: column;
+              justify-content: center;
+            }
             .container {
               margin-left: 0px;
               margin-right: 0px;
@@ -341,6 +428,388 @@ export default function Home() {
               width: 100%;
               flex-direction: column;
             }
+          }
+          .retro-button-green {
+            min-width: 130px;
+            height: 40px;
+            color: #fff;
+            padding: 5px 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            outline: none;
+            border: 1px solid #000;
+            color: #000;
+            background: transparent;
+            z-index: 1;
+          }
+          .retro-button-green:hover:after {
+            top: 0;
+            left: 0;
+          }
+          .retro-button-green:after {
+            content: "";
+            width: 100%;
+            z-index: -1;
+            position: absolute;
+            height: 100%;
+            top: 5px;
+            left: 5px;
+            transition: 0.2s;
+            opacity: 0.7;
+            background-color: #80ed99;
+          }
+
+          .retro-button-violet {
+            min-width: 130px;
+            height: 40px;
+            color: #fff;
+            padding: 5px 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            outline: none;
+            border: 1px solid #000;
+            color: #000;
+            background: transparent;
+            z-index: 1;
+          }
+          .retro-button-violet:hover:after {
+            top: 0;
+            left: 0;
+          }
+          .retro-button-violet:after {
+            content: "";
+            width: 100%;
+            z-index: -1;
+            position: absolute;
+            height: 100%;
+            top: 5px;
+            left: 5px;
+            transition: 0.2s;
+            opacity: 0.7;
+            background-color: #9998ff;
+          }
+          .retro-button-violet:disabled {
+            cursor: default;
+          }
+          .retro-button-violet:disabled:after {
+            background-color: #999;
+            cursor: default;
+          }
+
+          .retro-button-red {
+            min-width: 130px;
+            height: 40px;
+            color: #fff;
+            padding: 5px 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            outline: none;
+            border: 1px solid #000;
+            color: #000;
+            background: transparent;
+            z-index: 1;
+          }
+          .retro-button-red:hover:after {
+            top: 0;
+            left: 0;
+          }
+          .retro-button-red:after {
+            content: "";
+            width: 100%;
+            z-index: -1;
+            position: absolute;
+            height: 100%;
+            top: 5px;
+            left: 5px;
+            transition: 0.2s;
+            opacity: 0.7;
+            background-color: #ff5555;
+          }
+          .retro-button-red:disabled {
+            cursor: default;
+          }
+          .retro-button-red:disabled:after {
+            background-color: #999;
+            cursor: default;
+          }
+
+          .retro-button-blue {
+            min-width: 130px;
+            height: 40px;
+            color: #fff;
+            padding: 5px 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            outline: none;
+            border: 1px solid #000;
+            color: #000;
+            background: transparent;
+            z-index: 1;
+          }
+          .retro-button-blue:hover:after {
+            top: 0;
+            left: 0;
+          }
+          .retro-button-blue:after {
+            content: "";
+            width: 100%;
+            z-index: -1;
+            position: absolute;
+            height: 100%;
+            top: 5px;
+            left: 5px;
+            transition: 0.2s;
+            opacity: 0.7;
+            background-color: #3a86ff;
+          }
+          .retro-button-blue:disabled {
+            cursor: default;
+          }
+          .retro-button-blue:disabled:after {
+            background-color: #999;
+            cursor: default;
+          }
+
+          .retro-button-yellow {
+            min-width: 130px;
+            height: 40px;
+            color: #fff;
+            padding: 5px 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            outline: none;
+            border: 1px solid #000;
+            color: #000;
+            background: transparent;
+            z-index: 1;
+          }
+          .retro-button-yellow:hover:after {
+            top: 0;
+            left: 0;
+          }
+          .retro-button-yellow:after {
+            content: "";
+            width: 100%;
+            z-index: -1;
+            position: absolute;
+            height: 100%;
+            top: 5px;
+            left: 5px;
+            transition: 0.2s;
+            opacity: 0.7;
+            background-color: #ffe566;
+          }
+          .retro-button-yellow:disabled {
+            cursor: default;
+          }
+          .retro-button-yellow:disabled:after {
+            background-color: #999;
+            cursor: default;
+          }
+
+          .css-button-neumorphic {
+            min-width: 130px;
+            height: 40px;
+            color: #fff;
+            padding: 5px 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            outline: none;
+            border-radius: 5px;
+            border: none;
+            background: #efefef;
+            box-shadow: 2px 2px 4px #c8d0e7, -1px -1px 3px #fff;
+            color: #585858;
+          }
+          .css-button-neumorphic:active {
+            box-shadow: inset 1px 1px 3px #c8d0e7, inset -1px -1px 3px #fff;
+          }
+
+          .css-button-gradient--6 {
+            min-width: 130px;
+            height: 40px;
+            color: #fff;
+            padding: 5px 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            outline: none;
+            border-radius: 5px;
+            border: none;
+            background-size: 120% auto;
+            background-image: linear-gradient(315deg, #f0ecfc 0%, #c797eb 75%);
+          }
+          .css-button-gradient--6:hover {
+            background-position: right center;
+          }
+          .css-button-gradient--6:active {
+            top: 2px;
+          }
+
+          .css-button-sliding-to-left--sky {
+            min-width: 130px;
+            height: 40px;
+            color: #fff;
+            padding: 5px 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            outline: none;
+            border-radius: 5px;
+            z-index: 0;
+            background: #fff;
+            overflow: hidden;
+            border: 2px solid #4433ff;
+            color: #4433ff;
+          }
+          .css-button-sliding-to-left--sky:hover {
+            color: #fff;
+          }
+          .css-button-sliding-to-left--sky:hover:after {
+            width: 100%;
+          }
+          .css-button-sliding-to-left--sky:after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            transition: all 0.3s ease;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            background: #4433ff;
+          }
+
+          .button {
+            display: inline-block;
+            text-decoration: none;
+            position: relative;
+            margin-top: 40px;
+          }
+
+          .button .bottom {
+            position: absolute;
+            left: 7px;
+            top: 7px;
+            width: 100%;
+            height: 100%;
+            background-color: #80ed99;
+            display: block;
+            -webkit-transition: all 0.15s ease-out;
+            -moz-transition: all 0.15s ease-out;
+            -o-transition: all 0.15s ease-out;
+            transition: all 0.15s ease-out;
+          }
+
+          .button .top {
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            padding: 12px 17px 12px 17px;
+            border: 2px solid #80ed99;
+          }
+
+          .button-dark .top {
+            border: 2px solid #fff;
+          }
+
+          .button .top .label {
+            font-weight: 600;
+            color: #04049d;
+            /*font-size: 12px;*/
+            line-height: 110%;
+            letter-spacing: 2px;
+            text-align: center;
+            text-transform: uppercase;
+            -webkit-transition: all 0.15s ease-out;
+            -moz-transition: all 0.15s ease-out;
+            -o-transition: all 0.15s ease-out;
+            transition: all 0.15s ease-out;
+          }
+
+          .button-dark .top .label {
+            color: #fff;
+          }
+
+          .button:hover .bottom {
+            left: 0;
+            top: 0;
+            background-color: #f3f3f3;
+          }
+
+          .button:hover .top .label {
+            color: #80ed99;
+          }
+
+          .button-border {
+            position: absolute;
+            background-color: #80ed99;
+            -webkit-transition: all 0.25s ease-out;
+            -moz-transition: all 0.25s ease-out;
+            -o-transition: all 0.25s ease-out;
+            transition: all 0.25s ease-out;
+          }
+
+          .button:hover .top .button-border-left,
+          .button:hover .top .button-border-right {
+            height: calc(100% + 2px);
+          }
+
+          .button:hover .top .button-border-top,
+          .button:hover .top .button-border-bottom {
+            width: calc(100% + 2px);
+          }
+
+          .button-border-left {
+            left: -2px;
+            bottom: -2px;
+            width: 2px;
+            height: 0;
+          }
+
+          .button-border-top {
+            left: -2px;
+            top: -2px;
+            width: 0;
+            height: 2px;
+          }
+
+          .button-border-right {
+            right: -2px;
+            top: -2px;
+            width: 2px;
+            height: 0;
+          }
+
+          .button-border-bottom {
+            right: -2px;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
           }
         `}</style>
 
