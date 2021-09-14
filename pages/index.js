@@ -109,8 +109,9 @@ export default function Home() {
                 <p>
                   <video
                     src="https://foresty-tutorial.s3.ap-northeast-2.amazonaws.com/home-vidoe.mp4"
-                    autoplay="true"
-                    playsinline="true"
+                    autoPlay="true"
+                    playsInline="true"
+                    muted
                     loop="true"
                     width="100%"
                   ></video>
