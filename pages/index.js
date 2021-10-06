@@ -5,13 +5,14 @@ import KunderaStore from "../public/KunderaStore.jpg";
 import Profile from "../public/Profile.png";
 import { GithubIcon, EmailIcon } from "../assets/icons";
 
-export default function Home() {
+export default function Home () {
   return (
     <div style={{ backgroundColor: "#dddddd" }}>
       <div className="container">
         <Head>
           <title>Wan Cho</title>
           <link rel="icon" href={process.env.BACKEND_URL + "favicon.ico"} />
+          <meta name="description" content="Objective: A large office, good pay, and very little work."></meta>
         </Head>
 
         <main>
@@ -35,7 +36,7 @@ export default function Home() {
               <h2 className="title">Wan Cho</h2>
               <p className="description">
                 <EmailIcon width="20" height="20" />
-                bbogle7613@gmail.com
+                bbogle7613 @gmail.com
                 <br />
                 <a target="_blank" href="https://github.com/budlebee">
                   <GithubIcon width="20" height="20" />
@@ -85,7 +86,7 @@ export default function Home() {
                   <p>- stack: react, nodejs, postgresql, swift</p>
                   <p>- 사용자 선호에 따라 뜨는 문장이 바뀌는 추천 시스템</p>
                   <p>
-                    - 웹 프론트는 aws cloudfront 로 배포. 백엔드는 aws ec2와 api
+                    - 웹 프론트는 aws cloudfront 로 배포.백엔드는 aws ec2와 api
                     gateway 를 이용해 api 서버를 구축
                   </p>
                 </p>
@@ -111,7 +112,7 @@ export default function Home() {
                     src="https://foresty-tutorial.s3.ap-northeast-2.amazonaws.com/home-vidoe.mp4"
                     autoPlay="true"
                     playsInline="true"
-                    muted
+                    muted="true"
                     loop="true"
                     width="100%"
                   ></video>
@@ -220,7 +221,7 @@ export default function Home() {
               </div>
               <div className="small-section">
                 연세대 양자이미지 연구실 - Charge Density Wave Phase Analysis
-                (2021.08-)
+                (2021.08-2021.09)
               </div>
             </p>
           </div>
@@ -262,6 +263,16 @@ export default function Home() {
           <div className="section">
             <h3 className="small-title">Others</h3>
             <p className="description">
+              <div className="small-section">
+                기고한 글로 돈을 벌었습니다.야호!
+                <br />
+                <a
+                  target="_blank"
+                  href="https://alook.so/posts/jdtd9n"
+                >
+                  alook.so 에서 읽기
+                </a>
+              </div>
               <div className="small-section">
                 보유 특허 - 화면 캡쳐 행위에 대응하기 위한 방법 및 애플리케이션
                 (제 1-2290130 호)
