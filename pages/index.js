@@ -81,17 +81,22 @@ export default function Home () {
                     alt="Picture of the Kundera App store"
                     width="100%"
                   />
-                  <p>틱톡처럼 무작위 문장이 뜨는 SNS</p>
-                  <p>- 웹버전과 아이폰 앱을 풀스택으로 개발</p>
-                  <p>- stack: react, nodejs, postgresql, swift</p>
+                  <p>알고리즘이 추천해주는 문장이 뜨는 SNS</p>
+                  <p>- <a href="https://kundera.so" target="_blank">웹버전</a>과 <a href="https://apps.apple.com/kr/app/쿤데라/id1579221671" target="_blank">아이폰 앱</a>, <a href="https://play.google.com/store/apps/details?id=com.kundera" target="_blank">안드로이드 앱</a>을 풀스택으로 개발 후 출시</p>
+                  <p>- Tech stack : react, nodejs, postgresql, react native</p>
                   <p>- 사용자 선호에 따라 뜨는 문장이 바뀌는 추천 시스템</p>
                   <p>
-                    - 웹 프론트는 aws cloudfront 로 배포.백엔드는 aws ec2와 api
-                    gateway 를 이용해 api 서버를 구축
+                    - 웹 프론트는 aws cloudfront 로 배포. 백엔드는 aws ec2와 api
+                    gateway 를 이용해 api 서버를 구축.
+                  </p>
+                  <p>
+                    - 어플리케이션은 React native 를 사용해 크로스 플랫폼 개발.
                   </p>
                 </p>
               </details>
             </div>
+
+
 
             <div className="small-section">
               <details open>
@@ -196,6 +201,31 @@ export default function Home () {
                 </p>
               </details>
             </div>
+            <div className="small-section">
+              <details open>
+                <summary>
+                  <span>성장형 액션 핵앤슬래시 게임 2x_0</span>
+                  <span style={{ margin: "1rem" }}>
+                    <button className="retro-button-red">In Progress</button>
+                  </span>
+                </summary>
+                <p>
+                  <video
+                    src="https://budlebee-personal.s3.ap-northeast-2.amazonaws.com/game+short.mp4"
+                    autoPlay="true"
+                    playsInline="true"
+                    muted="true"
+                    loop="true"
+                    width="100%"
+                  ></video>
+                  <p>다양한 능력을 가진 적을 흡수해 더욱 강해지는 핵앤슬래시 액션게임</p>
+                  <p>- Indie game team project using Unity Engine.</p>
+                  <p>- Two programmers (me and my friend) and one artist (my friend, too). </p>
+                  <p>- Target platform : On the PC (Windows, MacOS, Linux)</p>
+                  <p>- Available TBD</p>
+                </p>
+              </details>
+            </div>
           </div>
           <div className="section">
             <h3 className="small-title">Experience</h3>
@@ -226,12 +256,10 @@ export default function Home () {
             </p>
           </div>
           <div className="section">
-            <h3 className="small-title">Skill Set</h3>
+            <h3 className="small-title">Skill Set & Tools</h3>
             <p className="description">
               <div className="small-section">
-                HTML, CSS, JS, React, NodeJS, PostgreSQL, Swift, AWS(EC2, API
-                Gateway, Lambda, SES, Route53, Cloudfront), Matlab, Clojure,
-                Python, Unity
+                JavaScript, CSS, React, NodeJS, PostgreSQL, AWS, Matlab, Unity, Photoshop, Git
               </div>
             </p>
           </div>
@@ -264,8 +292,7 @@ export default function Home () {
             <h3 className="small-title">Others</h3>
             <p className="description">
               <div className="small-section">
-                기고한 글로 돈을 벌었습니다.야호!
-                <br />
+                기고한 글로 돈을 벌었습니다. 야호! {" "}
                 <a
                   target="_blank"
                   href="https://alook.so/posts/jdtd9n"
@@ -284,18 +311,17 @@ export default function Home () {
                 연세대 상경경영대 동아리 헤드락 부회장 (2019.02-2019.08)
               </div>
               <div className="small-section">
-                락밴드 윈터폴 작사, 작곡, 리더 (2016.12-2018.08)
-                <br />
+                락밴드 윈터폴 작사, 작곡, 리더 (2016.12-2018.08){" "}
                 <a
                   target="_blank"
                   href="https://www.melon.com/album/detail.htm?albumId=10226873"
                 >
-                  Melon에서 듣기
+                  출시한 음원 Melon에서 듣기
                 </a>
               </div>
               <div className="small-section">
                 <a target="_blank" href="https://budlebee.wordpress.com">
-                  개인 블로그
+                  잡다한 것들 기록용 블로그
                 </a>
               </div>
             </p>
