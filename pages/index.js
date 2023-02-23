@@ -10,7 +10,7 @@ export default function Home () {
     <div style={{ backgroundColor: "#dddddd" }}>
       <div className="container">
         <Head>
-          <title>Wan Cho</title>
+          <title>Wan Zo</title>
           <link rel="icon" href={process.env.BACKEND_URL + "favicon.ico"} />
           <meta name="description" content="Objective: A large office, good pay, and very little work."></meta>
         </Head>
