@@ -6,24 +6,30 @@ import Profile from "../public/Profile.png";
 import { GithubIcon, EmailIcon } from "../assets/icons";
 
 export default function Home () {
+
   return (
     <div style={{ backgroundColor: "#dddddd" }}>
       <div className="container">
+
         <Head>
           <title>Wan Zo</title>
           <link rel="icon" href={process.env.BACKEND_URL + "favicon.ico"} />
-          <meta name="description" content="Objective: A large office, good pay, and very little work."></meta>
+          <meta name="description" content="Objective: A large office, good pay, and very flexible work."></meta>
         </Head>
 
+
+
         <main>
+
           <div
+
             className="section profile"
             style={{
               display: "flex",
               justifyContent: "space-around",
             }}
           >
-            <div style={{ margin: "1rem" }}>
+            <div style={{ margin: "1rem" }} >
               <img
                 src="/Profile.png"
                 alt="Picture of the author"
@@ -32,77 +38,228 @@ export default function Home () {
                 style={{ borderRadius: "39% 61% 25% 75% / 36% 56% 44% 64%" }}
               />
             </div>
-            <div style={{ margin: "1rem" }}>
-              <h2 className="title">Wan Cho</h2>
+
+            <div style={{ margin: "1rem" }} >
+              <h2 className="title">Wan Zo</h2>
               <p className="description">
-                <EmailIcon width="20" height="20" />
-                bbogle7613 @gmail.com
-                <br />
-                <a target="_blank" href="https://github.com/budlebee">
-                  <GithubIcon width="20" height="20" />
-                  Github
+                {/*<p>eigenname : 조완</p>*/}
+                <p>{/*<EmailIcon width="20" height="20" />*/}
+                  wanzo0407@gmail.com</p>
+                <p><a target="_blank" href="https://github.com/budlebee">
+                  {/*<GithubIcon width="20" height="20" />*/}
+                  Github (link)
                 </a>
+                </p>
+                <p>
+                  <a target="_blank" href="https://budlebee.wordpress.com">
+                    Blog (link)
+                  </a>
+                </p>
               </p>
             </div>
           </div>
+
+          <div className="section">
+            <div className="title">About</div>
+            <p className="description">
+              <div className="small-section">
+                <p>
+                  I am a motivated M.S. candidate in quantum optics and quantum information. I am passionate about exploring the fundamental principles of quantum systems and their applications such as quantum computing and quantum communication.
+                </p>
+              </div>
+            </p>
+          </div>
+
           <div className="section">
             <div className="title">Education</div>
             <p className="description">
               <div className="small-section">
-                연세대학교 물리학과 (2015.03-2022.02 졸업예정자)
-              </div>
-              <div className="small-section">
-                GPA Total: 4.05 / 4.5, Major: 4.12 / 4.5
+                <p>
+                  <b>M.S. course in Physics</b>
+                  <br></br>
+                  Center for Quantum Information, Korea Institute of Science and Technology (KIST), Seoul, Korea
+                  <br></br>
+                  Department of Physics, Yonsei University, Seoul, Korea
+                  <br></br>
+                  Co-adviser : Yong-su Kim(KIST), Kyunghwan Oh(Yonsei)
+                  <br></br>
+                  Mar 2022 - present
+                </p>
+                <p>
+                  <b>B.S. in Physics (GPA 3.84/4.3)</b>
+                  <br></br>
+                  Department of Physics, Yonsei University, Seoul, Korea
+                  <br></br>
+                  Mar 2015 - Feb 2022
+                </p>
+                <p>
+                  <b>Mandatory military service</b><br></br>
+                  Aug 2016 - Aug 2018
+                </p>
               </div>
             </p>
           </div>
+
           <div className="section">
-            <div className="title">Works</div>
+            <h3 className="small-title">Experience</h3>
+            <p className="description">
+              <div className="small-section">
+                Yonsei 3D Optical Nano Imaging Labratory - Signal Filter Simulation<br></br>
+                Jul 2016 - Aug 2016{" "}
+                <a
+                  target="_blank"
+                  href="https://github.com/budlebee/signal-filter-simulation"
+                >
+                  Github link
+                </a>
+              </div>
+              <div className="small-section">
+                Yonsei DFT Labratory - 2D Ising model using monte carlo
+                moving <br></br>
+                Dec 2019 - Jan 2020{" "}
+                <a target="_blank" href="https://github.com/budlebee/2d-ising">
+                  Github link
+                </a>
+              </div>
+              <div className="small-section">
+                Yonsei STM Quantum Imaging Labratory - Charge Density Wave Phase Analysis<br></br>
+                Aug 2021 - Sep 2021
+              </div>
+            </p>
+          </div>
 
-            <div className="small-section">
-              <details open>
-                <summary>
-                  <span>문장공유 SNS 쿤데라</span>
-                  <span style={{ margin: "1rem" }}>
-                    <a
-                      target="_blank"
-                      href="https://kundera.so"
-                      style={{ color: "#000" }}
-                    >
-                      <button className="retro-button-violet">
-                        사용해보기
-                      </button>
-                    </a>
-                  </span>
-                </summary>
+          <div className="section">
+            <h3 className="small-title">Research Projects</h3>
+            <p className="description">
+              <div className="small-section">
                 <p>
-                  <img
-                    src="/KunderaStore.jpg"
-                    alt="Picture of the Kundera App store"
-                    width="100%"
-                  />
-                  <p>알고리즘이 추천해주는 문장이 뜨는 SNS</p>
-                  <p>- <a href="https://kundera.so" target="_blank">웹버전</a>과 <a href="https://apps.apple.com/kr/app/쿤데라/id1579221671" target="_blank">아이폰 앱</a>, <a href="https://play.google.com/store/apps/details?id=com.kundera" target="_blank">안드로이드 앱</a>을 풀스택으로 개발 후 출시</p>
-                  <p>- Tech stack : react, nodejs, postgresql, react native</p>
-                  <p>- 사용자 선호에 따라 뜨는 문장이 바뀌는 추천 시스템</p>
-                  <p>
-                    - 웹 프론트는 aws cloudfront 로 배포. 백엔드는 aws ec2와 api
-                    gateway 를 이용해 api 서버를 구축.
-                  </p>
-                  <p>
-                    - 어플리케이션은 React native 를 사용해 크로스 플랫폼 개발.
-                  </p>
+                  Spontaneous Parametric Down Conversion
                 </p>
-              </details>
-            </div>
+                <p>
+                  Quantum teleportation via lossy channel
+                </p>
+                <p>
+                  Randomized compiling in optics
+                </p>
+              </div>
+            </p>
+          </div>
+
+          <div className="section">
+            <h3 className="small-title">Academic Conferences</h3>
+            <p className="description">
+              <div className="small-section">
+                <p>
+                  1. <b>Decentralized heralded entanglement generation in quantum network</b><br></br>
+                  poster<br></br>
+                  Optical Society Korea Conference, Feb 15-17, 2023
+                </p>
+              </div>
+            </p>
+          </div>
+
+
+          <div className="section">
+            <h3 className="small-title">Skill Set</h3>
+            <p className="description">
+              <div className="small-section">
+                Python, JavaScript, Git
+              </div>
+            </p>
+          </div>
+
+          <div className="section">
+            <h3 className="small-title">Awards</h3>
+            <p className="description">
+              <div className="small-section">
+                Yonsei Scholarship, 2021
+              </div>
+              <div className="small-section">
+                창업진흥원 주관 청청콘 수상 (샬롯의 책가방), 2020
+              </div>
+              <div className="small-section">
+                엑셀러레이터 와이앤아처 스타트업 익스퍼트 1기 (샬롯의
+                책가방), 2020
+              </div>
+              <div className="small-section">
+                연세대 고등교육원 워크스테이션 선정, 2020, 2021
+              </div>
+              <div className="small-section">
+                연세대 스타트업 이글스 선정, 2020
+              </div>
+              {/*<div className="small-section">
+                2017 동두천 락페스티벌 본선 진출 (윈터폴)
+              </div>*/}
+            </p>
+          </div>
+
+          <div className="section">
+            <h3 className="small-title">Miscellaneous and Personal Works</h3>
+            <p className="description">
+              <div className="small-section">
+                보유 특허 - 화면 캡쳐 행위에 대응하기 위한 방법 및 애플리케이션
+                (제 1-2290130 호)
+              </div>
+              <div className="small-section">
+                밴드 윈터폴 작사, 작곡 (2016.12-2018.08){" "}
+                <a
+                  target="_blank"
+                  href="https://www.melon.com/album/detail.htm?albumId=10226873"
+                >
+                  출시한 음원 Melon에서 듣기
+                </a>
+              </div>
+              <div className="small-section">
+                연세대 상경경영대 밴드동아리 헤드락 부회장 (2019.02-2019.08)
+              </div>
+              <div className="small-section">
+                연세대 멋쟁이 사자처럼 8기 (2020)
+              </div>
+
+              <div className="small-section">
+                <details>
+                  <summary>
+                    <span>문장공유 SNS 쿤데라</span>
+                    <span style={{ margin: "1rem" }}>
+                      <a
+                        target="_blank"
+                        href="https://kundera.so"
+                        style={{ color: "#000" }}
+                      >
+                        <button className="retro-button-violet">
+                          사용해보기
+                        </button>
+                      </a>
+                    </span>
+                  </summary>
+                  <p>
+                    <img
+                      src="/KunderaStore.jpg"
+                      alt="Picture of the Kundera App store"
+                      width="100%"
+                    />
+                    <p>알고리즘이 추천해주는 문장이 뜨는 SNS</p>
+                    <p>- <a href="https://kundera.so" target="_blank">웹버전</a>과 <a href="https://apps.apple.com/kr/app/쿤데라/id1579221671" target="_blank">아이폰 앱</a>, <a href="https://play.google.com/store/apps/details?id=com.kundera" target="_blank">안드로이드 앱</a>을 풀스택으로 개발 후 출시</p>
+                    <p>- Tech stack : react, nodejs, postgresql, react native</p>
+                    <p>- 사용자 선호에 따라 뜨는 문장이 바뀌는 추천 시스템</p>
+                    <p>
+                      - 웹 프론트는 aws cloudfront 로 배포. 백엔드는 aws ec2와 api
+                      gateway 를 이용해 api 서버를 구축.
+                    </p>
+                    <p>
+                      - 어플리케이션은 React native 를 사용해 크로스 플랫폼 개발.
+                    </p>
+                  </p>
+                </details>
+              </div>
 
 
 
-            <div className="small-section">
-              <details open>
-                <summary>
-                  <span>노트테이킹 서비스 Foresty</span>
-                  <span style={{ margin: "1rem" }}>
+              <div className="small-section">
+                <details>
+                  <summary>
+                    <span>노트테이킹 서비스 Foresty</span>
+                    {/*<span style={{ margin: "1rem" }}>
                     <a
                       target="_blank"
                       href="https://foresty.net"
@@ -110,30 +267,31 @@ export default function Home () {
                     >
                       <button className="retro-button-green">사용해보기</button>
                     </a>
-                  </span>
-                </summary>
-                <p>
-                  <video
-                    src="https://foresty-tutorial.s3.ap-northeast-2.amazonaws.com/home-vidoe.mp4"
-                    autoPlay="true"
-                    playsInline="true"
-                    muted="true"
-                    loop="true"
-                    width="100%"
-                  ></video>
-                  <p>트리 그래프 형식의 노트테이킹 서비스</p>
-                  <p>- stack: d3js, react, google firebase</p>
-                  <p>- 클릭앤 드래그로 노드 연결 기능</p>
-                  <p>- 멀티윈도우 기능</p>
-                </p>
-              </details>
-            </div>
+                  </span>*/}
 
-            <div className="small-section">
-              <details open>
-                <summary>
-                  <span>유튜브 캡쳐 SaaS Videoglancer</span>
-                  <span style={{ margin: "1rem" }}>
+                  </summary>
+                  <p>
+                    <video
+                      src="https://foresty-tutorial.s3.ap-northeast-2.amazonaws.com/home-vidoe.mp4"
+                      autoPlay="true"
+                      playsInline="true"
+                      muted="true"
+                      loop="true"
+                      width="100%"
+                    ></video>
+                    <p>트리 그래프 형식의 노트테이킹 서비스</p>
+                    <p>- stack: d3js, react, google firebase</p>
+                    <p>- 클릭앤 드래그로 노드 연결 기능</p>
+                    <p>- 멀티윈도우 기능</p>
+                  </p>
+                </details>
+              </div>
+
+              <div className="small-section">
+                <details>
+                  <summary>
+                    <span>유튜브 캡쳐 SaaS Videoglancer</span>
+                    {/*<span style={{ margin: "1rem" }}>
                     <a
                       target="_blank"
                       href="https://videoglancer.com"
@@ -143,64 +301,66 @@ export default function Home () {
                         사용해보기
                       </button>
                     </a>
-                  </span>
-                </summary>
-                <p>
-                  <img
-                    src="https://videoglancer.com/static/media/sample.d33125ae.png"
-                    width="100%"
-                  ></img>
-                  <p>
-                    유튜브 영상 url 을 입력하면 영상을 1분단위로 캡쳐해서 pdf 로
-                    만들어 주는 서비스.
-                  </p>
-                  <p>
-                    - stack: websocket API, 브라우저 자동화 도구 puppeteer, aws
-                    lambda, api gateway
-                  </p>
-                </p>
-              </details>
-            </div>
+                  </span>*/}
 
-            <div className="small-section">
-              <details open>
-                <summary>
-                  <span>크롬/웨일 익스텐션 Go연세/Go려대</span>
-                  <span style={{ margin: "1rem" }}>
-                    <a
-                      target="_blank"
-                      href="https://store.whale.naver.com/detail/flaejhfppahhbmndffooogikeaphbfmd"
-                      style={{ color: "#000" }}
-                    >
-                      <button className="retro-button-blue">사용해보기</button>
-                    </a>
-                  </span>
-                </summary>
-                <p>
-                  <img src="/goyonsei.png" width="100%"></img>
-                  <img src="/goryu.png" width="100%"></img>
-                  <p>연세대 / 고려대 생이 자주 가는 링크 모음</p>
+                  </summary>
                   <p>
-                    -{" "}
-                    <a
-                      target="_blank"
-                      href="https://github.com/seohyun0120/Quick-Sook"
-                    >
-                      퀵숙
-                    </a>
-                    을 포크해서 제작.
+                    <img
+                      src="https://videoglancer.com/static/media/sample.d33125ae.png"
+                      width="100%"
+                    ></img>
+                    <p>
+                      유튜브 영상 url 을 입력하면 영상을 1분단위로 캡쳐해서 pdf 로
+                      만들어 주는 서비스.
+                    </p>
+                    <p>
+                      - stack: websocket API, 브라우저 자동화 도구 puppeteer, aws
+                      lambda, api gateway
+                    </p>
                   </p>
+                </details>
+              </div>
+
+              <div className="small-section">
+                <details>
+                  <summary>
+                    <span>크롬/웨일 익스텐션 Go연세/Go려대</span>
+                    <span style={{ margin: "1rem" }}>
+                      <a
+                        target="_blank"
+                        href="https://store.whale.naver.com/detail/flaejhfppahhbmndffooogikeaphbfmd"
+                        style={{ color: "#000" }}
+                      >
+                        <button className="retro-button-blue">사용해보기</button>
+                      </a>
+                    </span>
+                  </summary>
                   <p>
-                    - 다크모드 기능을 추가해서 PR을 날린뒤, 저희 학교용으로
-                    제작해도 되냐고 허락을 받아서 제작하게 됨.
+                    <img src="/goyonsei.png" width="100%"></img>
+                    <img src="/goryu.png" width="100%"></img>
+                    <p>연세대 / 고려대 생이 자주 가는 링크 모음</p>
+                    <p>
+                      -{" "}
+                      <a
+                        target="_blank"
+                        href="https://github.com/seohyun0120/Quick-Sook"
+                      >
+                        퀵숙
+                      </a>
+                      을 포크해서 제작.
+                    </p>
+                    <p>
+                      - 다크모드 기능을 추가해서 PR을 날린뒤, 저희 학교용으로
+                      제작해도 되냐고 허락을 받아서 제작하게 됨.
+                    </p>
+                    <p>
+                      - 고려대 익스텐션도 연대생이 만들어 버리면 재밌겠다 싶어서
+                      만들어버림.
+                    </p>
                   </p>
-                  <p>
-                    - 고려대 익스텐션도 연대생이 만들어 버리면 재밌겠다 싶어서
-                    만들어버림.
-                  </p>
-                </p>
-              </details>
-            </div>
+                </details>
+              </div>
+              {/*
             <div className="small-section">
               <details open>
                 <summary>
@@ -226,106 +386,10 @@ export default function Home () {
                 </p>
               </details>
             </div>
-          </div>
-          <div className="section">
-            <h3 className="small-title">Experience</h3>
-            <p className="description">
-              <div className="small-section">
-                연세대 응용광학연구실 - Signal Filter Simulation
-                (2016.07-2016.08)
-                <br />
-                <a
-                  target="_blank"
-                  href="https://github.com/budlebee/signal-filter-simulation"
-                >
-                  Github
-                </a>
-              </div>
-              <div className="small-section">
-                연세대 전자구조계산 연구실 - 2D Ising model using monte carlo
-                moving (2019.12-2020.01)
-                <br />
-                <a target="_blank" href="https://github.com/budlebee/2d-ising">
-                  Github
-                </a>
-              </div>
-              <div className="small-section">
-                연세대 양자이미지 연구실 - Charge Density Wave Phase Analysis
-                (2021.08-2021.09)
-              </div>
+            */}
             </p>
           </div>
-          <div className="section">
-            <h3 className="small-title">Skill Set & Tools</h3>
-            <p className="description">
-              <div className="small-section">
-                JavaScript, CSS, React, NodeJS, PostgreSQL, AWS, Matlab, Unity, Photoshop, Git
-              </div>
-            </p>
-          </div>
-          <div className="section">
-            <h3 className="small-title">Awards</h3>
-            <p className="description">
-              <div className="small-section">
-                2020 창업진흥원 주관 청청콘 장려상 (샬롯의 책가방, 상금
-                5000만원)
-              </div>
-              <div className="small-section">
-                2020 엑셀러레이터 와이앤아처 스타트업 익스퍼트 1기 (샬롯의
-                책가방)
-              </div>
-              <div className="small-section">
-                2020, 2021 연세대 고등교육원 워크스테이션 선정 (상금 350만원)
-              </div>
-              <div className="small-section">
-                2021 학과 수석 및 성적우수장학금
-              </div>
-              <div className="small-section">
-                2020 연세대 스타트업 이글스 선정 (지원금액 300만원)
-              </div>
-              <div className="small-section">
-                2017 동두천 락페스티벌 본선 진출 (윈터폴)
-              </div>
-            </p>
-          </div>
-          <div className="section">
-            <h3 className="small-title">Others</h3>
-            <p className="description">
-              <div className="small-section">
-                기고한 글로 돈을 벌었습니다. 야호! {" "}
-                <a
-                  target="_blank"
-                  href="https://alook.so/posts/jdtd9n"
-                >
-                  alook.so 에서 읽기
-                </a>
-              </div>
-              <div className="small-section">
-                보유 특허 - 화면 캡쳐 행위에 대응하기 위한 방법 및 애플리케이션
-                (제 1-2290130 호)
-              </div>
-              <div className="small-section">
-                연세대 멋쟁이 사자처럼 8기 (2020)
-              </div>
-              <div className="small-section">
-                연세대 상경경영대 동아리 헤드락 부회장 (2019.02-2019.08)
-              </div>
-              <div className="small-section">
-                락밴드 윈터폴 작사, 작곡, 리더 (2016.12-2018.08){" "}
-                <a
-                  target="_blank"
-                  href="https://www.melon.com/album/detail.htm?albumId=10226873"
-                >
-                  출시한 음원 Melon에서 듣기
-                </a>
-              </div>
-              <div className="small-section">
-                <a target="_blank" href="https://budlebee.wordpress.com">
-                  잡다한 것들 기록용 블로그
-                </a>
-              </div>
-            </p>
-          </div>
+
         </main>
 
         <style jsx>{`
@@ -871,6 +935,7 @@ export default function Home () {
           }
 
           * {
+            line-height:1.5em;
             box-sizing: border-box;
           }
         `}</style>
