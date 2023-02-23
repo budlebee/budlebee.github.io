@@ -44,7 +44,7 @@ export default function Home () {
               <p className="description">
                 {/*<p>eigenname : 조완</p>*/}
                 <p>{/*<EmailIcon width="20" height="20" />*/}
-                  wanzo0407@gmail.com</p>
+                  zowan@kist.re.kr</p>
                 <p><a target="_blank" href="https://github.com/budlebee">
                   {/*<GithubIcon width="20" height="20" />*/}
                   Github (link)
@@ -75,20 +75,20 @@ export default function Home () {
             <p className="description">
               <div className="small-section">
                 <p>
-                  <b>M.S. course in Physics</b>
+                  <b>M.S. candidate in Physics</b>
                   <br></br>
-                  Center for Quantum Information, Korea Institute of Science and Technology (KIST), Seoul, Korea
+                  - Center for Quantum Information, Korea Institute of Science and Technology (KIST), Seoul, Korea
                   <br></br>
-                  Department of Physics, Yonsei University, Seoul, Korea
+                  - Department of Physics, Yonsei University, Seoul, Korea
                   <br></br>
-                  Co-adviser : Yong-su Kim(KIST), Kyunghwan Oh(Yonsei)
+                  Co-advisers : Yong-su Kim(KIST), Kyunghwan Oh(Yonsei)
                   <br></br>
                   Mar 2022 - present
                 </p>
                 <p>
                   <b>B.S. in Physics (GPA 3.84/4.3)</b>
                   <br></br>
-                  Department of Physics, Yonsei University, Seoul, Korea
+                  - Department of Physics, Yonsei University, Seoul, Korea
                   <br></br>
                   Mar 2015 - Feb 2022
                 </p>
@@ -101,45 +101,17 @@ export default function Home () {
           </div>
 
           <div className="section">
-            <h3 className="small-title">Experience</h3>
-            <p className="description">
-              <div className="small-section">
-                Yonsei 3D Optical Nano Imaging Labratory - Signal Filter Simulation<br></br>
-                Jul 2016 - Aug 2016{" "}
-                <a
-                  target="_blank"
-                  href="https://github.com/budlebee/signal-filter-simulation"
-                >
-                  Github link
-                </a>
-              </div>
-              <div className="small-section">
-                Yonsei DFT Labratory - 2D Ising model using monte carlo
-                moving <br></br>
-                Dec 2019 - Jan 2020{" "}
-                <a target="_blank" href="https://github.com/budlebee/2d-ising">
-                  Github link
-                </a>
-              </div>
-              <div className="small-section">
-                Yonsei STM Quantum Imaging Labratory - Charge Density Wave Phase Analysis<br></br>
-                Aug 2021 - Sep 2021
-              </div>
-            </p>
-          </div>
-
-          <div className="section">
             <h3 className="small-title">Research Projects</h3>
             <p className="description">
               <div className="small-section">
                 <p>
-                  Spontaneous Parametric Down Conversion
+                  <b>Spontaneous Parametric Down Conversion</b>
                 </p>
                 <p>
-                  Quantum teleportation via lossy channel
+                  <b>Quantum teleportation via lossy channel</b>
                 </p>
                 <p>
-                  Randomized compiling in optics
+                  <b>Randomized compiling in optics</b>
                 </p>
               </div>
             </p>
@@ -151,16 +123,48 @@ export default function Home () {
               <div className="small-section">
                 <p>
                   1. <b>Decentralized heralded entanglement generation in quantum network</b><br></br>
-                  poster<br></br>
+                  - poster<br></br>
                   Optical Society Korea Conference, Feb 15-17, 2023
                 </p>
               </div>
             </p>
           </div>
 
+          <div className="section">
+            <h3 className="small-title">Experiences</h3>
+            <p className="description">
+
+
+              <div className="small-section">
+                3. <b>Yonsei STM Quantum Imaging Labratory</b><br></br>
+                - Charge Density Wave Phase Analysis<br></br>
+                Aug 2021 - Sep 2021
+              </div>
+              <div className="small-section">
+                2. <b>Yonsei DFT Labratory</b><br></br>
+                - 2D Ising model using monte carlo
+                moving (<a target="_blank" href="https://github.com/budlebee/2d-ising">
+                  Github link
+                </a>)<br></br>
+                Dec 2019 - Jan 2020{" "}
+
+              </div>
+              <div className="small-section">
+                1. <b>Yonsei 3D Optical Nano Imaging Labratory</b><br></br>
+                - Signal Filter Simulation (<a
+                  target="_blank"
+                  href="https://github.com/budlebee/signal-filter-simulation"
+                >
+                  Github link
+                </a>)<br></br>
+                Jul 2016 - Aug 2016{" "}
+
+              </div>
+            </p>
+          </div>
 
           <div className="section">
-            <h3 className="small-title">Skill Set</h3>
+            <h3 className="small-title">Skills</h3>
             <p className="description">
               <div className="small-section">
                 Python, JavaScript, Git
