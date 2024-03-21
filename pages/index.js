@@ -2,7 +2,8 @@ import Head from "next/head";
 //import Image from "next/image";
 import KunderaMain from "../public/KunderaMain.png";
 import KunderaStore from "../public/KunderaStore.jpg";
-import Profile from "../public/Profile.png";
+//import Profile from "../public/Profile.png";
+import Profile from "../public/Profile2.png";
 import { GithubIcon, EmailIcon } from "../assets/icons";
 
 export default function Home () {
@@ -31,7 +32,7 @@ export default function Home () {
           >
             <div style={{ margin: "1rem" }} >
               <img
-                src="/Profile.png"
+                src="/Profile2.png"
                 alt="Picture of the author"
                 width={200}
                 height={200}
@@ -44,10 +45,9 @@ export default function Home () {
               <p className="description">
                 {/*<p>eigenname : 조완</p>*/}
                 <p>{/*<EmailIcon width="20" height="20" />*/}
-                  zowan@kist.re.kr</p>
-                <p><a target="_blank" href="https://github.com/budlebee">
-                  {/*<GithubIcon width="20" height="20" />*/}
-                  Github (link)
+                  snu_zowan@snu.ac.kr</p>
+                <p><a target="_blank" href="https://drive.google.com/file/d/1lIv3sUwgKEQV5OqpQYlnbGPrYG2iPnIU/view?usp=share_link">
+                  CV (link)
                 </a>
                 </p>
                 <p>
@@ -58,13 +58,12 @@ export default function Home () {
               </p>
             </div>
           </div>
-
           <div className="section">
             <div className="title">About</div>
             <p className="description">
               <div className="small-section">
                 <p>
-                  I am a motivated M.S. candidate in quantum optics and quantum information. I am passionate about exploring the fundamental principles of quantum systems and their applications such as quantum computing and quantum communication.
+                  I am a motivated Ph.D. candidate in ultracold atom physics. I am passionate about exploring the fundamental principles of quantum systems and their applications.
                 </p>
               </div>
             </p>
@@ -75,26 +74,32 @@ export default function Home () {
             <p className="description">
               <div className="small-section">
                 <p>
-                  <b>M.S. candidate in Physics</b>
+                  <b>Ph.D. candidate in Physics</b>
                   <br></br>
-                  - Center for Quantum Information, Korea Institute of Science and Technology (KIST), Seoul, Korea
+                  Department of Physics and Astronomy, Seoul National University, Seoul 08826, Korea
+                  Adviser: Yong-il Shin
                   <br></br>
-                  - Department of Physics, Yonsei University, Seoul, Korea
+                  From Mar. 2024
+                </p>
+                <p>
+                  <b>M.S. in Physics</b>
+                  <br></br>
+                  Center for Quantum Information, Korea Institute of Science and Technology (KIST), Seoul, Korea / Department of Physics, Yonsei University, Seoul, Korea
                   <br></br>
                   Co-advisers : Yong-su Kim(KIST), Kyunghwan Oh(Yonsei)
                   <br></br>
-                  Mar 2022 - present
+                  Mar. 2022 - Feb. 2024
+                  <br></br>
+                  <a target="_blank" href="https://drive.google.com/file/d/1CioAGwu8Y_3LI2cPRnviZW5Y7SY2pYjH/view?usp=share_link">
+                    Thesis: Sharing Entanglement via Lossy Quantum Channels (link)
+                  </a>
                 </p>
                 <p>
-                  <b>B.S. in Physics (GPA 3.84/4.3)</b>
+                  <b>B.S. in Physics</b>
                   <br></br>
-                  - Department of Physics, Yonsei University, Seoul, Korea
+                  Department of Physics, Yonsei University, Seoul, Korea
                   <br></br>
-                  Mar 2015 - Feb 2022
-                </p>
-                <p>
-                  <b>Mandatory military service</b><br></br>
-                  Aug 2016 - Aug 2018
+                  Mar. 2015 - Feb. 2022 (Mandatory military service Aug 2016. - Aug. 2018)
                 </p>
               </div>
             </p>
@@ -105,13 +110,14 @@ export default function Home () {
             <p className="description">
               <div className="small-section">
                 <p>
-                  <b>Spontaneous Parametric Down Conversion</b>
+                  <b>Entanglement swapping with photon-number encoded states via lossy quantum channels</b>,<br></br>
+                  <b>Wan Zo</b>, Bohdan Bilash, Donghwa Lee, Yosep Kim, Hyang-Tag Lim, Kyunghwan Oh, and Yong-Su Kim, <br></br>
+                  In preparation
                 </p>
                 <p>
-                  <b>Quantum teleportation via lossy channel</b>
-                </p>
-                <p>
-                  <b>Randomized compiling in optics</b>
+                  <b>Heralded entanglement distribution for lossy linear optical networks</b>, <br></br>
+                  <b>Wan Zo</b>, Seungbeom Chin, and Yong-Su Kim<br></br>
+                  In preparation
                 </p>
               </div>
             </p>
@@ -122,9 +128,19 @@ export default function Home () {
             <p className="description">
               <div className="small-section">
                 <p>
+                  3. <b>Experimental investigation of entanglement swapping via lossy quantum channels</b> <br></br>
+                  - poster<br></br>
+                  6th Korea Quantum Information Conference, Nov 2023
+                </p>
+                <p>
+                  2. <b>Experimental investigation of entanglement swapping via lossy quantum channels</b> <br></br>
+                  - poster<br></br>
+                  23rd Asian Quantum Information Science (AQIS) Conference, Aug 2023
+                </p>
+                <p>
                   1. <b>Decentralized heralded entanglement generation in quantum network</b><br></br>
                   - poster<br></br>
-                  Optical Society Korea Conference, Feb 15-17, 2023
+                  Optical Society Korea Conference, Feb 2023
                 </p>
               </div>
             </p>
@@ -137,7 +153,7 @@ export default function Home () {
 
               <div className="small-section">
                 3. <b>Yonsei STM Quantum Imaging Labratory</b><br></br>
-                - Charge Density Wave Phase Analysis<br></br>
+                - STM Domain Image Analysis<br></br>
                 Aug 2021 - Sep 2021
               </div>
               <div className="small-section">
@@ -159,15 +175,6 @@ export default function Home () {
                 </a>)<br></br>
                 Jul 2016 - Aug 2016{" "}
 
-              </div>
-            </p>
-          </div>
-
-          <div className="section">
-            <h3 className="small-title">Skills</h3>
-            <p className="description">
-              <div className="small-section">
-                Python, JavaScript, Git
               </div>
             </p>
           </div>
@@ -198,12 +205,22 @@ export default function Home () {
           </div>
 
           <div className="section">
-            <h3 className="small-title">Miscellaneous and Personal Works</h3>
+            <h3 className="small-title">Personal Works</h3>
             <p className="description">
               <div className="small-section">
                 보유 특허 - 화면 캡쳐 행위에 대응하기 위한 방법 및 애플리케이션
                 (제 1-2290130 호)
               </div>
+              <div className="small-section">
+                밴드 무무바 작사/작곡/Guitar (2022? -){" "}
+                <a
+                  target="_blank"
+                  href="https://linksalad.net/hFtTajvvod"
+                >
+                  출시한 음원 듣기
+                </a>
+              </div>
+
               <div className="small-section">
                 밴드 윈터폴 작사, 작곡 (2016.12-2018.08){" "}
                 <a
@@ -242,7 +259,7 @@ export default function Home () {
                       alt="Picture of the Kundera App store"
                       width="100%"
                     />
-                    <p>알고리즘이 추천해주는 문장이 뜨는 SNS</p>
+                    <p>알고리즘이 문장을 추천해주는 서비스.</p>
                     <p>- <a href="https://kundera.so" target="_blank">웹버전</a>과 <a href="https://apps.apple.com/kr/app/쿤데라/id1579221671" target="_blank">아이폰 앱</a>, <a href="https://play.google.com/store/apps/details?id=com.kundera" target="_blank">안드로이드 앱</a>을 풀스택으로 개발 후 출시</p>
                     <p>- Tech stack : react, nodejs, postgresql, react native</p>
                     <p>- 사용자 선호에 따라 뜨는 문장이 바뀌는 추천 시스템</p>
@@ -283,7 +300,7 @@ export default function Home () {
                       loop="true"
                       width="100%"
                     ></video>
-                    <p>트리 그래프 형식의 노트테이킹 서비스</p>
+                    <p>Deprecated. 트리 그래프 형식의 노트테이킹 서비스</p>
                     <p>- stack: d3js, react, google firebase</p>
                     <p>- 클릭앤 드래그로 노드 연결 기능</p>
                     <p>- 멀티윈도우 기능</p>
@@ -309,13 +326,13 @@ export default function Home () {
 
                   </summary>
                   <p>
-                    <img
+                    {/*<img
                       src="https://videoglancer.com/static/media/sample.d33125ae.png"
                       width="100%"
-                    ></img>
+                    ></img>*/}
                     <p>
-                      유튜브 영상 url 을 입력하면 영상을 1분단위로 캡쳐해서 pdf 로
-                      만들어 주는 서비스.
+                      Deprecated. 유튜브 영상 url 을 입력하면 영상을 1분단위로 캡쳐해서 pdf 로
+                      만들어 주는 서비스. <a href="https://www.producthunt.com/products/videoglancer" target="_blank">Product hunt link</a>.
                     </p>
                     <p>
                       - stack: websocket API, 브라우저 자동화 도구 puppeteer, aws
@@ -354,7 +371,7 @@ export default function Home () {
                       을 포크해서 제작.
                     </p>
                     <p>
-                      - 다크모드 기능을 추가해서 PR을 날린뒤, 저희 학교용으로
+                      - 다크모드 기능을 추가해서 PR을 날린뒤, 다른 학교용으로
                       제작해도 되냐고 허락을 받아서 제작하게 됨.
                     </p>
                     <p>
